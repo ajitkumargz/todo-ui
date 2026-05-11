@@ -1,0 +1,204 @@
+.mainapp{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 0.1px;
+}
+
+nav{
+  margin-top: 0;
+  text-align: center;
+  background-color: #dfe2e5;
+  position: fixed;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a:hover{
+  background-color: #ccc6c6;
+}
+
+@media (max-width: 300px) {
+  nav a{
+    display: block;
+  }
+  .taskform{
+    margin-top: 500px;
+    padding-top: 50px;
+  }
+}
+
+.table-container{
+  width: 100%;
+  margin-top: 12%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin: 10px 0;
+  font-family: sans-serif;
+}
+
+table th, table td {
+  border: 1px solid #ddd;   
+  padding: 12px 15px;     
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4; 
+  font-weight: bold;
+}
+
+.taskform {
+  display: grid;
+  grid-template-columns: 100px 1fr; 
+  gap: 20px;
+  max-width: 500px; 
+  margin: 20px auto; 
+  padding: 20px;
+  border: 1px solid #ccb2b2;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.taskform label {
+  font-weight: bold;
+  align-self: start;
+  padding-top: 8px;
+}
+
+.taskform textarea, 
+.taskform select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.taskform button {
+  grid-column: 1 / -1;
+  padding: 10px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.taskform button:hover {
+  background-color: #535bf2;
+}
+
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  margin-top: 175px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #646cff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+.editpop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-backdrop{
+  position: fixed;
+  z-index: 1000;
+  background-color: #f3f5f8;
+  border-radius: 5px;
+  margin-bottom: 200px;
+}
+
+.model-content .taskform {
+  display: grid;
+  grid-template-columns: 120px 1fr; 
+  gap: 20px;
+  margin: 20px auto; 
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.homeapp{
+  display: grid;
+  grid-template-columns: 100px 1fr; 
+  gap: 20px;
+  max-width: 350px; 
+  margin: 10px auto; 
+  padding: 10px;
+  border: 1px solid #ccb2b2;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.contents{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.contents h2, .contents p{
+  text-align: center;
+}
+
+
