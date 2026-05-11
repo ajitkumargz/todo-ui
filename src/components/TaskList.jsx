@@ -11,7 +11,7 @@ function TaskList() {
     const [newId, setNewId] = useState('');
 
     useEffect(() => {
-        axios.get("http://localhost:8080/todo/task")
+        axios.get("https://todo-api-h8mr.onrender.com/todo/task")
             .then((res) => {
                 setList(res.data);
             })
@@ -23,7 +23,7 @@ function TaskList() {
     const deleteHandler = async (id) => {
         if (window.confirm("Are you sure want to delete?")) {
             try {
-                const res = await axios.delete(`http://localhost:8080/todo/task/${id}`);
+                const res = await axios.delete(`https://todo-api-h8mr.onrender.com/todo/task/${id}`);
             }
             catch (err) {
                 console.error(err);
@@ -41,7 +41,7 @@ function TaskList() {
 
     const updateTask = async (task) => {
         try {
-            await axios.put(`http://localhost:8080/todo/task/${newId}`, {
+            await axios.put(`https://todo-api-h8mr.onrender.com/todo/task/${newId}`, {
                 title: newTask,
                 status: newStatus
             });

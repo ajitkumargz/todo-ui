@@ -7,7 +7,7 @@ function TaskForm() {
 
     const taskHandler = async () => {
         try {
-            const res = await axios.post("http://localhost:8080/todo/task", {
+            const res = await axios.post("https://todo-api-h8mr.onrender.com/todo/task", {
                 title: task,
                 status: status
             });
