@@ -1,4 +1,4 @@
-function Footer() {
+function FooterBar() {
     return (
         <div className="footer">
             <div className="footer-content">
@@ -19,4 +19,4 @@ function Footer() {
         </div>
     )
 }
-export default Footer
+export default FooterBar

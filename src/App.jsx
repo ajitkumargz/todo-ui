@@ -4,10 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Home from './pages/Home'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
-import Footer from './components/footer'
+import FooterBar from './components/FooterBar'
 
 function App() {
-
 
   return (
     <div>
@@ -24,8 +23,7 @@ function App() {
             <Route path='/tasklist' element={<TaskList />} />
           </Routes>
         </Router>
-
-        <Footer />
+        <FooterBar />
       </div>
     </div>
   )
