@@ -1,11 +1,11 @@
-.mainapp{
+.mainapp {
   width: 100%;
   height: 100%;
   margin: 0;
   padding-top: 0.1px;
 }
 
-nav{
+nav {
   margin-top: 0;
   text-align: center;
   background-color: #dfe2e5;
@@ -13,56 +13,48 @@ nav{
   width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
   padding: 20px;
   display: inline-block;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-nav a:hover{
+
+nav a:hover {
   background-color: #ccc6c6;
 }
 
-@media (max-width: 300px) {
-  nav a{
-    display: block;
-  }
-  .taskform{
-    margin-top: 500px;
-    padding-top: 50px;
-  }
-}
-
-.table-container{
+.table-container {
   width: 100%;
   margin-top: 12%;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
   margin: 10px 0;
   font-family: sans-serif;
 }
 
-table th, table td {
-  border: 1px solid #ddd;   
-  padding: 12px 15px;     
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
   text-align: left;
 }
 
 table th {
-  background-color: #f4f4f4; 
+  background-color: #f4f4f4;
   font-weight: bold;
 }
 
 .taskform {
   display: grid;
-  grid-template-columns: 100px 1fr; 
+  grid-template-columns: 100px 1fr;
   gap: 20px;
-  max-width: 500px; 
-  margin: 20px auto; 
+  max-width: 500px;
+  margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccb2b2;
   border-radius: 5px;
@@ -75,13 +67,13 @@ table th {
   padding-top: 8px;
 }
 
-.taskform textarea, 
+.taskform textarea,
 .taskform select {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
+
 }
 
 .taskform button {
@@ -104,12 +96,13 @@ table th {
   color: #ffffff;
   padding: 40px 20px 20px;
   margin-top: 175px;
+  width: 100%;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
   gap: 30px;
@@ -117,12 +110,13 @@ table th {
 
 .footer-section {
   flex: 1;
-  min-width: 250px;
+  width: 100%;
 }
 
 .footer-links {
   display: flex;
   gap: 20px;
+  width: 100%;
 }
 
 .footer-links a {
@@ -144,24 +138,13 @@ table th {
   color: #64748b;
 }
 
-@media (max-width: 500px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-links {
-    justify-content: center;
-  }
-}
-
-
-.editpop{
+.editpop {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.model-backdrop{
+.model-backdrop {
   position: fixed;
   z-index: 1000;
   background-color: #f3f5f8;
@@ -171,34 +154,114 @@ table th {
 
 .model-content .taskform {
   display: grid;
-  grid-template-columns: 120px 1fr; 
+  grid-template-columns: 120px 1fr;
   gap: 20px;
-  margin: 20px auto; 
+  margin: 20px auto;
   border: 1px solid;
   border-radius: 5px;
 }
 
-.homeapp{
+.homeapp {
   display: grid;
-  grid-template-columns: 100px 1fr; 
+  grid-template-columns: 100px 1fr;
   gap: 20px;
-  max-width: 350px; 
-  margin: 10px auto; 
+  max-width: 350px;
+  margin: 10px auto;
   padding: 10px;
   border: 1px solid #ccb2b2;
   border-radius: 5px;
   margin-top: 100px;
 }
 
-.contents{
+.contents {
   display: block;
   justify-content: center;
   align-items: center;
   width: 300px;
 }
 
-.contents h2, .contents p{
+.contents h2,
+.contents p {
   text-align: center;
 }
 
+@media (max-width: 412px) {
+  .model-content .taskform {
+    background-color: #caceda;
+  }
 
+  .model-backdrop {
+    position: fixed;
+    z-index: 1000;
+    background-color: #f3f5f8;
+    border-radius: 5px;
+    margin-bottom: 800px;
+    margin-left: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  nav {
+    max-width: 100%;
+  }
+
+  .mainapp {
+    max-width: 100%;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: #1f3d57;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.loading-spinner {
+  width: 80px;
+  height: 80px;
+  border: 5px solid rgba(136, 201, 255, 0.2);
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}

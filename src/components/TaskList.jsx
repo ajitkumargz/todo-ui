@@ -9,11 +9,13 @@ function TaskList() {
     const [newTask, setNewTask] = useState('');
     const [newStatus, setNewStatus] = useState('');
     const [newId, setNewId] = useState('');
+    const [isLoadingData, setIsLoadingData] = useState(true);
 
     useEffect(() => {
         axios.get("https://todo-api-h8mr.onrender.com/todo/task")
             .then((res) => {
                 setList(res.data);
+                setIsLoadingData(false);
             })
             .catch((err) => {
                 console.error(err);
@@ -52,6 +54,11 @@ function TaskList() {
         }
 
     }
+
+    if (isLoadingData) return (<div className="loading-container">
+        <div className="loading-spinner"></div>
+        <div className="loading-text">Loading...</div>
+    </div>);
 
     return (
         <div>

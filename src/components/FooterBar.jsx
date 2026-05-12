@@ -3,7 +3,7 @@ function FooterBar() {
         <div className="footer">
             <div className="footer-content">
                 <div className="footer-section">
-                    <h3>Todo App</h3>
+                    <h3>Task Manager</h3>
                     <p>Organize your tasks efficiently.</p>
                 </div>
                 <div className="footer-links">

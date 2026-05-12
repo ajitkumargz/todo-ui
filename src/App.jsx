@@ -5,6 +5,9 @@ import Home from './pages/Home'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import FooterBar from './components/FooterBar'
+import { lazy, Suspense } from 'react'
+
+const LazyTask = lazy(() => import('./components/TaskList'));
 
 function App() {
 
@@ -17,11 +20,13 @@ function App() {
             <Link to="/taskform">Add Todo Task</Link>
             <Link to='/tasklist'>Todo List</Link>
           </nav>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/taskform' element={<TaskForm />} />
-            <Route path='/tasklist' element={<TaskList />} />
-          </Routes>
+          <Suspense fallback={<div className='loading'>Loading....</div>}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/taskform' element={<TaskForm />} />
+              <Route path='/tasklist' element={<LazyTask />} />
+            </Routes>
+          </Suspense>
         </Router>
         <FooterBar />
       </div>
